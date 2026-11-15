@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-pixel: "Geist Pixel", sans-serif;
+}
+
+/* Custom utility class if needed, though utility classes like `font-pixel` are generated automatically */
+.geist-pixel-custom {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 0;
+}
