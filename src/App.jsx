@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 const App = () => {
+  const apiUrl = import.meta.env.VITE_API_KEY;
   const [cityInput, setCityInput] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [loading,setLoading] = useState(false);
@@ -13,7 +14,7 @@ const App = () => {
        setError(null);
 
     try{
-      const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=415f10a4eea241dc9e8180524252606&q=${val}`)
+      const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiUrl}&q=${val}`)
  
        if(!response.ok){
         throw new Error("Bad response");
